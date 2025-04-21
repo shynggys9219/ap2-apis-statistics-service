@@ -5,7 +5,7 @@ package statistics.base.frontend.v1;
 import "google/protobuf/timestamp.proto";
 import "base/frontend/v1/order.proto";
 
-option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/base/frontend/v1;base";
+option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/base/frontend/v1;statsbase";
 
 message Statistic {
   // client id

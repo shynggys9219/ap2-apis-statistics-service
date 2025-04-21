@@ -4,7 +4,7 @@ package statistics.service.frontend.client.v1;
 
 import "base/frontend/v1/client.proto";
 
-option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/service/frontend/client/v1;client";
+option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/service/frontend/client/v1;statsclient";
 
 //------------------------
 // Statistics service:
