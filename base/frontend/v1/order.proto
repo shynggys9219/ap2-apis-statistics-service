@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package statistics.base.frontend.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/base/frontend/v1;base";
+
+message Order {
+  // order id
+  uint64 id = 1;
+  // type
+  OrderType type = 2;
+  // sum
+  float sum = 3;
+  // created at
+  google.protobuf.Timestamp created_at = 4;
+  // updated at
+  google.protobuf.Timestamp updated_at = 5;
+  // status
+  OrderStatus status = 6;
+}
+
+enum OrderType {
+  ORDER_TYPE_UNSPECIFIED = 0;
+  ORDER_TYPE_PRE_ORDER = 1;
+    ORDER_TYPE_INSTANT = 2;
+}
+
+enum OrderStatus {
+  ORDER_STATUS_UNSPECIFIED = 0;
+  ORDER_STATUS_CREATED = 1;
+  ORDER_STATUS_PENDING = 2;
+  ORDER_STATUS_COMPLETED = 3;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package statistics.service.frontend.client.v1;
+
+import "base/frontend/v1/client.proto";
+
+option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/service/frontend/client/v1;client";
+
+//------------------------
+// Statistics service:
+//------------------------
+// Format: proto
+// client: frontend (web, native apps)
+// server: statistics-service
+// Access:
+//   gRPC
+//---------------------------------------------------------------------------------
+service ClientStatisticsService {
+  //------------------------
+  // Get: get a client statistics
+  //------------------------
+  rpc Get(GetRequest) returns (GetResponse);
+
+  //------------------------
+  // List: list all statistics
+  //------------------------
+  rpc List(ListRequest) returns (ListResponse);
+}
+
+message GetRequest {
+  // id
+  uint64 id = 1;
+}
+
+message GetResponse {
+  // client struct
+  base.frontend.v1.Statistic client = 1;
+}
+
+message ListRequest {}
+
+message ListResponse {
+  // list of clients statistics
+  repeated base.frontend.v1.Statistic clients = 1;
+}
