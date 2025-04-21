@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package statistics.service.frontend.client.v1;
+package statistics.service.frontend.statistic.v1;
 
 import "base/frontend/v1/client_stats.proto";
 
-option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/service/frontend/client/v1;statsclient";
+option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/service/frontend/client_stats/v1;statssvc";
 
 //------------------------
 // Statistics service:
