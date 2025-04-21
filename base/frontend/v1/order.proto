@@ -9,16 +9,18 @@ option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/bas
 message Order {
   // order id
   uint64 id = 1;
+  // client id
+  uint64 client_id = 2;
   // type
-  OrderType type = 2;
+  OrderType type = 3;
   // sum
-  float sum = 3;
+  float sum = 4;
   // created at
-  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp created_at = 5;
   // updated at
-  google.protobuf.Timestamp updated_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
   // status
-  OrderStatus status = 6;
+  OrderStatus status = 7;
 }
 
 enum OrderType {

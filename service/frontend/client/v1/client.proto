@@ -17,11 +17,6 @@ option go_package = "github.com/shynggys9219/ap2-apis-gen-statistics-service/ser
 //---------------------------------------------------------------------------------
 service ClientStatisticsService {
   //------------------------
-  // Create: create a client statistics
-  //------------------------
-  rpc Create(CreateRequest) returns (CreateResponse);
-
-  //------------------------
   // Get: get a client statistics
   //------------------------
   rpc Get(GetRequest) returns (GetResponse);
